@@ -1,0 +1,251 @@
+/* CSS Document */
+
+@import url("stylename.css");
+
+body{
+margin: 0;
+padding: 0;
+color: #000;
+height: 100%;
+background-color: #4972a5;
+background: url(../images/rain4.png) 500px 500px repeat fixed,
+			url(../images/rain5.png) 100px 100px repeat fixed,
+			url(../images/rain4.png) 300px 300px repeat fixed,
+			url(../images/rain5.png) 200px 200px repeat fixed,
+			url(../images/rain4.png) repeat fixed,
+			url(../images/bg04.jpg) no-repeat fixed;
+background-size: auto, auto, auto, auto, auto, 100% 100%;
+animation: rain1 3s linear infinite;
+}
+@keyframes rain1 {
+ from {background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;}
+ to {background-position: 0px 1000px, 0px 3000px, 0px 4000px, 0px 2000px, 0px 700px, 0px 0px ;}
+}
+
+* { 
+	-webkit-box-sizing: border-box; /* Для Safari и Chrome */
+	   -moz-box-sizing: border-box; /* Для Firefox */
+		    box-sizing: border-box; /* Для IE и Opera */
+   }
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+ul {
+margin: 0;
+padding: 0;
+}
+
+li{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+h1 {
+font-size: 1.2em;
+}
+
+h2 {
+font-size: 1.2em;
+}
+
+/* Content */
+
+/*Menu*/
+nav{
+	cursor: pointer;
+	position: fixed;
+	color: #fff;
+	font-family: "BebasLight";
+	border: 3px solid #fff;
+	transform: skewX(-20deg); /* Наклоняем вправо */
+}
+nav{
+	font-size: 0;
+}
+nav ul li {
+	font-size: 24px;
+	padding: 0;
+    background: transparent; /* Цвет фона */
+    width: 100px; /* Ширина списка */
+	border-right: 3px solid #fff;
+	display: inline-block; /* Блочные ссылки */
+    color: #fff; /* Цвет ссылок */
+	
+  -webkit-transition: background 1.0s ease-in, color 1.0s ease-in;	
+     -moz-transition: background 1.0s ease-in, color 1.0s ease-in;	
+       -o-transition: background 1.0s ease-in, color 1.0s ease-in;	
+          transition: background 1.0s ease-in, color 1.0s ease-in;		  
+}
+nav ul li:hover {
+	background: #fff;
+	color: #4972a5;
+}
+  
+nav ul li:last-child {
+    width: 200px; /* Ширина списка */
+   }   
+nav ul  li a {
+    display: block; /* Блочные ссылки */
+    padding: 5px 20px; /* Поля */
+    transform: skewX(20deg); /* Наклоняем ссылки обратно */
+}
+.menu{
+	top: 20px;
+	right: -80px;
+}   
+.promo{
+	top: 20px;
+	left: -40px;
+}
+.promo ul li{
+	width: 200px;
+	text-align: right;
+	margin-right: -3px;	
+}
+
+/*Main button */   
+#switcher{
+	cursor: pointer;
+	position: absolute;
+	top: 150px;
+	left: 50%;
+	margin: 0 auto;
+	width: 240px;
+	height: 80px;
+	border: 5px solid #fff;
+	margin-left: -120px;
+	background: transparent;
+	color: #fff;
+	font-size: 48px;
+	text-transform: uppercase;
+	font-family: "BebasLight";
+		
+  -webkit-transition: background 1.0s ease-in, color 1.0s ease-in;	
+     -moz-transition: background 1.0s ease-in, color 1.0s ease-in;	
+       -o-transition: background 1.0s ease-in, color 1.0s ease-in;	
+          transition: background 1.0s ease-in, color 1.0s ease-in;		  
+}
+#switcher:hover {
+	background: #fff;
+	color: #4972a5;
+}
+
+
+@media (max-width: 1200px) {
+	body{
+		background-size: auto, auto, auto, auto, auto, cover;	
+	}
+}
+
+@media (max-width: 767px) {
+	nav{
+		border: 2px solid #fff;
+	}	
+	nav ul li{
+	    width: 70px;
+		font-size: 20px;	    	
+	}
+	nav ul li a {
+	    padding: 5px 15px; /* Поля */
+   }
+	.menu{
+		right: -120px;		
+	}  
+	.promo{
+		top: auto;
+		bottom: 20px;			
+	}
+	#switcher{
+		width: 160px;
+		height: 70px;
+		border: 3px solid #fff;
+		margin-left: -80px;
+		font-size: 40px;
+	}		 	
+}
+
+/*Previous button */
+/*.previous{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	margin-top: -35px;
+	width: 70px;
+	height: 70px;
+	border-radius: 40px;
+	border: 0px solid #fff;
+	background: transparent;
+	opacity: 0.8;
+}
+.previous:before{
+	content:"";
+	display: block;
+	position: relative;
+	top: 15px;
+	right: -30px;
+	width: 7px;
+	height: 20px;
+	background: #fff;
+	transform: skewX(-30deg);
+}
+.previous:after{
+	content:"";
+	display: block;
+	position: relative;
+	top: 15px;
+	right: -30px;
+	width: 7px;
+	height: 20px;
+	background: #fff;
+	transform: skewX(30deg); 
+}*/
+/*Next button */
+/*.next{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	margin-top: -35px;
+	width: 70px;
+	height: 70px;
+	border-radius: 40px;
+	border: 0px solid #fff;
+	background: transparent;
+	opacity: 0.8;
+}
+.next:before{
+	content:"";
+	display: block;
+	position: relative;
+	top: 15px;
+	left: 35px;
+	width: 7px;
+	height: 20px;
+	background: #fff;
+	transform: skewX(30deg);
+}
+.next:after{
+	content:"";
+	display: block;
+	position: relative;
+	top: 15px;
+	left: 35px;
+	width: 7px;
+	height: 20px;
+	background: #fff;
+	transform: skewX(-30deg); 
+}
+
+.next:hover, .previous:hover {
+	animation: pulse 1.5s infinite ease-in-out;
+}
+@keyframes pulse {
+	0% {box-shadow: 0 0 12px rgba(51,204,255,.2);}
+	50% {box-shadow: 0 0 12px rgba(51,204,255,.9);}
+	100% {box-shadow: 0 0 12px rgba(51,204,255,.2);}
+}*/	

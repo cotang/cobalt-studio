@@ -1,0 +1,117 @@
+/* CSS Document */
+
+@import url("stylename.css");
+
+body{
+margin: 0;
+padding: 0;
+font-size: 16px;
+color: #fff;
+height: 100%;
+background-color: #000;
+overflow: hidden;
+background: url(../images/bg001.jpg) no-repeat fixed;
+background-size: 100% 100%;
+}
+
+body:after{
+content: "COBALT STUDIO";
+position: absolute;
+top:50%;
+display: block;
+text-align: center;
+margin-top: -0.6em;
+height: 1.2em;
+width: 100%;
+font-size: 72px;
+
+letter-spacing: 0.4em;
+font-family: "BebasBook";
+animation: zoom 3s cubic-bezier(.83, 1.49, .39, .81) forwards, blur 3s ease-in-out infinite alternate 3s, bg 3s step-end forwards; 	
+}
+
+@keyframes zoom {
+  from {  -webkit-transform: scale3d(30, 30, 30);
+    transform: scale3d(30, 30, 30);  
+	}  
+  to {  -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }   
+	}
+@keyframes blur {
+  from       {text-shadow: 2px 2px 20px #fff, -2px -2px 20px #fff; color: #fff; }
+  to {text-shadow: 2px 2px 4px #fff, -2px -2px 5px #fff; color: transparent; }  
+
+}
+@keyframes bg {
+  from {background-color: transparent; }
+  to {background-color: rgba(0,0,0,0.7); }  
+
+}
+
+
+* { 
+	-webkit-box-sizing: border-box; /* Для Safari и Chrome */
+	   -moz-box-sizing: border-box; /* Для Firefox */
+		    box-sizing: border-box; /* Для IE и Opera */
+   }
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+ul {
+margin: 0 auto;
+padding: 0;
+}
+
+li{
+list-style-type: none;
+}
+
+h1 {
+font-size: 1.2em;
+}
+
+h2 {
+font-size: 1.2em;
+}
+
+/* Content */
+
+
+.go{
+	display: inline-block;
+	cursor: pointer;
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+	margin: 0 auto;
+	width: 80px;
+	height: 80px;
+	line-height: 70px;
+	text-align: center;
+	margin-left: -40px;
+	border-radius: 40px;
+	border: 5px solid #fff;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	font-size: 24px;
+	font-family: "BebasLight";
+}
+
+.go:hover {
+	animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+	0% {box-shadow: 0 0 12px rgba(0,0,0,.2);}
+	50% {box-shadow: 0 0 24px rgba(0,0,0,.9);}
+	100% {box-shadow: 0 0 12px rgba(0,0,0,.2);}
+}
+
+#test{
+	color: transparent;
+	text-shadow: 950px 0 5px #fff, 200px 120px 5px #fff, 300px 200px 5px #fff, 700px 500px 5px #fff, 550px 480px 5px #fff, 400px 600px 5px #fff;
+	font-size: 60px;
+}	

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+<link rel="stylesheet" type="text/css" href="css/sun.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<title>Sun</title>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+$(function () {
+    var flag = false;
+    $('#switcher').on('click', function () {
+        var action = ((flag = !flag) ? 'paused' : 'running');
+        $("body").css({
+            '-webkit-animation-play-state': action,
+                '-moz-animation-play-state': action,
+                'animation-play-state': action
+        });
+    });
+});
+</script>    
+ </head>
+ <body>
+	<button id="switcher">Sun</button>
+	<nav class="menu">
+		<ul>
+			<li><a href="snow.html">Snow</a></li>
+			<li><a href="rain.html">Rain</a></li>
+			<li><a href="fog.html">Fog</a></li>
+			<li><a href="#">Sun</a></li>
+		</ul>
+	</nav>
+	<nav class="promo">
+		<ul>
+			<li><a href="promo.html">Promo</a></li>
+		</ul>
+	</nav>	
+<!--	<a class="previous" href="fog.html"></a>
+	<a class="next" href="snow.html"></a>
+-->	
+ </body>
+</html>
